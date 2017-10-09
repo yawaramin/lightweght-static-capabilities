@@ -168,7 +168,7 @@ let rec rev list acc = match NEList.fromList list with
 ```java
 import java.util.*;
 
-final class SortedList<A> {
+final class SortedList<A extends Comparable<A>> {
   private ArrayList<A> _list;
 
   public SortedList(List<A> list) {
@@ -186,7 +186,10 @@ final class SortedList<A> {
 
 - Not a value type so will pay price of allocation
 - Immediately sort internal list on construction to enforce invariant
+- Enforcing that elements are comparable--needed for sort
 - Return shallow copy of internal list--prevent changes
+- Use composition rather than inheritance to manage invariants more
+  precisely
 - Could also use an immutable list type like from
   [http://www.functionaljava.org/](http://www.functionaljava.org/javadoc/4.7/functionaljava/index.html)
 

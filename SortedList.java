@@ -1,9 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
 
-final class SortedList<A> {
+final class SortedList<A extends Comparable<A>> {
   private ArrayList<A> _list;
 
+  /** Immediately assure that we sort the given list. */
   public SortedList(List<A> list) {
     _list = new ArrayList<>(list); _list.sort(null);
   }
