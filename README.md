@@ -6,12 +6,13 @@
 
 ## About
 
-- Paper by Oleg Kiselyov and Chung-chieh Shan
-- I've slightly changed some code to more idiomatic OCaml
+- Paper by Oleg Kiselyov and Chung-chieh Shan:
+  [http://okmij.org/ftp/papers/lightweight-static-capabilities.pdf](http://okmij.org/ftp/papers/lightweight-static-capabilities.pdf)
+- Slides available at
+  [https://github.com/yawaramin/lightweght-static-capabilities](https://github.com/yawaramin/lightweght-static-capabilities)
+  (that's not a typo)
 - Base requirement: statically-typed programming language
 - Slightly more advanced techniques possible with higher-rank types
-- Tail recursion if you want to use continuation-passing style to gain some
-  efficiency
 
 ## Why?
 
