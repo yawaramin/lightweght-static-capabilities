@@ -9,7 +9,7 @@ final class SortedList<A extends Comparable<A>> {
     _list = new ArrayList<>(list); _list.sort(null);
   }
 
-  public List<A> get() {
+  public List<A> toList() {
     // We know this is safe, but Java doesn't because of type erasure.
     return (List<A>)_list.clone();
   }
