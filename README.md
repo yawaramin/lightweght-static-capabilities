@@ -30,7 +30,8 @@
 - Small piece of trusted (certified) code
 - A unique type given to above trusted code so that code that typechecks is
   _certified_
-- Above type controls access to dynamic values
+- 'Proxy' types represent dynamic values statically (compile-time
+  metaprogramming like C++ templates)
 
 # Example: reverse list
 
