@@ -156,7 +156,6 @@ let rec rev list acc = match NEList.fromList list with
 
 - Used for performance reasons in OCaml
 - Can be ugly
-
 - Might be mitigated by using option types instead and letting a more
   optimising compiler (OCaml's flambda optimiser?) erase them
 
@@ -198,5 +197,7 @@ final class SortedList<A extends Comparable<A>> {
 
 - Manually implement internal sorting
 - `SortedList<A>` is an abstract type that certifies list sorting
-- IOW, guarantee that function that takes a `SortedList<A>` will get a sorted list
-- Sort _once,_ reuse everywhere that needs the sorted list, with same guarantee
+- IOW, guarantee that function that takes a `SortedList<A>` will get a sorted
+  list
+- Sort _once,_ reuse everywhere that needs the sorted list, with same
+  guarantee
