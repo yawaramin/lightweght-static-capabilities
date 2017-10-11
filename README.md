@@ -202,3 +202,22 @@ final class SortedList<A extends Comparable<A>> {
   list
 - Sort _once,_ reuse everywhere that needs the sorted list, with same
   guarantee
+
+# Bonus
+
+## C++
+
+From [https://github.com/I3ck/FlaggedT](https://github.com/I3ck/FlaggedT):
+
+```cpp
+//if no exception is thrown, wrapped is now guarenteed >= 0
+auto wrapped = NonNegative<int>(3);
+
+auto wontCompile = NonNull<int*>(nullptr); //won't compile
+
+//creating any Sorted<T> will directly sort its data and keep it that way
+auto alwaysSorted =
+  Sorted<std::vector<int>>(std::vector<int>({4,9,2,13,15,17}));
+```
+
+Look familiar? 😊
